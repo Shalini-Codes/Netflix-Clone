@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #111;
+    color: white;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: black;
+}
+
+.logo {
+    color: red;
+    font-size: 28px;
+}
+
+.btn {
+    background: red;
+    border: none;
+    padding: 8px 16px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Search */
+.search {
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: none;
+    background: #222;
+    color: white;
+}
+
+/* Banner */
+.banner {
+    height: 400px;
+    background: url('https://image.tmdb.org/t/p/original/xDMIl84Qo5Tsu62c9DGWhmPI67A.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    position: relative;
+}
+
+.banner::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #111, transparent);
+}
+
+.banner-content {
+    position: relative;
+}
+
+.banner-content h1 {
+    font-size: 40px;
+}
+
+.banner-content p {
+    margin: 10px 0;
+}
+
+/* Rows */
+.row {
+    margin: 20px;
+}
+
+.posters {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+}
+
+.posters img {
+    width: 200px;
+    transition: 0.3s;
+}
+
+.posters img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: gray;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .posters img {
+        width: 120px;
+    }
+
+    .banner-content h1 {
+        font-size: 22px;
+    }
+}
